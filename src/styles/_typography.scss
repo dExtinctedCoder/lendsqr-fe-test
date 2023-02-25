@@ -1,0 +1,13 @@
+@import './variables';
+
+h1 {
+  font-size: $text-2xl;
+}
+
+small {
+  font-size: $text-xs;
+}
+
+p, label {
+  font-size: $text-base;
+}
