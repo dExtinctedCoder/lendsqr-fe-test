@@ -4,9 +4,9 @@ What is Lendsqr? **Lendsqr** is a LaaS that’s transforming lending in Africa b
 
 ## Tech stack
 
-**React**
-**TypeScript**
-**SCSS**
+- **React**  
+- **TypeScript**  
+- **SCSS**
 
 ## Figma Link
 
@@ -19,20 +19,20 @@ What is Lendsqr? **Lendsqr** is a LaaS that’s transforming lending in Africa b
 3. Use local storage or indexedDB to store and retrieve user details on the user details page.
 4. The page must be mobile responsive
 
-## Follow these commands to run the proect on your local machine
+## Follow these commands to run the project on your local machine
 
-1. Clone the project
+### Clone the project
 
-> git clone (https://github.com/dExtinctedCoder/lendsqr-fe-test)
+ > git clone (<<https://github.com/dExtinctedCoder/lendsqr-fe-test)>
 
-1. Enter the project directory
+### Enter the project directory
 
-> cd lendsqr-fe-test
+ > cd lendsqr-fe-test
 
-1. Install project dependencies
+### Install project dependencies
 
-> yarn add
+ > yarn add
 
-1. Run the server
+### Run the server
 
-> yarn dev
+ > yarn dev
