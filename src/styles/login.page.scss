@@ -1,0 +1,130 @@
+@import './variables';
+
+.login__page {
+  background-color: $white--full;
+  &>div {
+    display: flex;
+
+    &>div {
+      padding: 6.625rem 4.1875rem;
+      .logo__box {
+        width: 173.76px;
+        margin-bottom: 4.5rem;
+      }
+      .hero--img__box {
+        width: 600px;
+      }
+    }
+
+    &>main {
+      background: $white--full;
+      box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 6.25rem;
+
+      form {
+        flex-grow: 1;
+        width: 447px;
+        &>div {
+          &:first-child {
+            color: $dark--blue;
+            margin-bottom: 3.75rem;
+            h1 {
+              font-weight: 700;
+              margin-bottom: 0.625rem;
+            }
+            p {
+              font-size: $text-md;
+              color: $grey--blue;
+              font-weight: normal;
+            }
+          }
+  
+          &:nth-child(2) {
+            .field__control {
+              &:first-child {
+                margin-bottom: 1.5rem;
+              }
+              input {
+                padding: 0.78125rem 1rem;
+                background: $white--full;
+                border: 2px solid $grey--blue;
+                border-radius: 0.3125rem;
+
+                &:hover, &:active {
+                  border-color: $light--green;
+                }
+                
+                &:focus {
+                  border-color: transparent;
+                  outline: 2px solid $light--green;
+                }
+  
+                &::placeholder {
+                  color: $grey--blue;
+                  font-size: $text-sm;
+                  font-family: inherit;
+                }
+              }
+              &:last-child {
+                margin-bottom: 1.875rem;
+                .pass--field__box {
+                  position: relative;
+  
+                  input {
+                    margin-bottom: 1.25rem;
+                  }
+                  span {
+                    position: absolute;
+                    right: 1.21875rem;
+                    top: 0rem;
+                    transform: translateY(1rem);
+                    font-weight: 600;
+                    font-size: $text-sm;
+                    line-height: 1rem;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: $light--green;
+                    cursor: pointer;
+                  }
+                }
+                small {
+                  color: $light--green;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  cursor: pointer;
+
+                  &:hover {
+                    color: $lg--hover;
+                  }
+                }
+              }
+            }
+          }
+  
+          &:nth-child(3) {
+            button {
+              cursor: pointer;
+              padding: 1rem;
+              background: $light--green;
+              border-radius: 0.5rem;
+              font-weight: 600;
+              font-size: $text-sm;
+              line-height: 1.1875rem;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: $white--full;
+
+              &:hover {
+                background-color: $lg--hover;
+              }
+            }
+          }
+  
+        }
+      }
+    }
+  }
+}
