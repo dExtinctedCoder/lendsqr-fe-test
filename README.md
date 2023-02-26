@@ -12,6 +12,8 @@ What is Lendsqr? **Lendsqr** is a LaaS that’s transforming lending in Africa b
 
 > [**Lendsqr Figma link**](https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530%3A0&t=pPQngOkpBsfUxQK1-0)
 
+## [**Live Link**](https://jamiu-salaudeen-lendsqr-fe-test.vercel.app/)
+
 ## List of Tasks
 
 1. Build the 4 pages Login, Dashboard, User page, User details page
