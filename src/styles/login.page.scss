@@ -102,10 +102,13 @@
                     margin-bottom: 1.25rem;
                   }
                   span {
+                    background-color: $white--full;
+                    z-index: 1;
+                    padding-inline: 0.25rem 1.21875rem;
+                    padding-block: calc(1rem - 4px);
                     position: absolute;
-                    right: 1.21875rem;
-                    top: 0rem;
-                    transform: translateY(1rem);
+                    right: calc(0rem + 3px);
+                    top: 2px;
                     font-weight: 600;
                     font-size: $text-sm;
                     line-height: 1rem;
