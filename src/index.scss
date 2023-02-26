@@ -1,3 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 @import './styles/global';
 @import './styles/typography';
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url('avenir-next\AvenirNextLTPro-Bold.otf');
+  src: url('avenir-next\AvenirNextLTPro-Bold.otf') format('opentype'),
+       url('avenir-next\AvenirNextLTPro-It.otf') format('otf'),
+       url('avenir-next\AvenirNextLTPro-Regular.otf') format('otf'),
+}
