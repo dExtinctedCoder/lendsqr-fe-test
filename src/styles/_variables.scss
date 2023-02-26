@@ -16,3 +16,11 @@ $light--green: #39CDCC;
 $red: #E4033B;
 $green: #39CD62;
 $gold: #E9B200;
+
+/* hover state */
+$db--hover: darken($color: $dark--blue, $amount: 5);
+$gb--hover: darken($color: $grey--blue, $amount: 5);
+$lg--hover: darken($color: $light--green, $amount: 5);
+$red--hover: darken($color: $red, $amount: 5);
+$green--hover: darken($color: $green, $amount: 5);
+$gold--hover: darken($color: $gold, $amount: 5);
