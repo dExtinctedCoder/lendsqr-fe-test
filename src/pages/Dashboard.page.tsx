@@ -1,17 +1,22 @@
-import {useContext} from 'react'
-import { AppContext } from '../assets/context/AppContext'
 import Nav from "../component/Nav"
+import PageContentGrid from "../component/PageContentGrid"
 import SideBar from "../component/SideBar"
+import '../styles/dashboard.scss'
 
 const Dashboard = () => {
-
-  const {isMenuOpen} = useContext(AppContext)
   return (
-    <div>
+    <div className='dashboard__control'>
       <Nav />
-      {isMenuOpen && <SideBar />}
-      <h1>Dashboard!</h1>
+      <PageContentGrid SideBar={<SideBar/>} MainComponent={<DashboardMain />} />
     </div>
+  )
+}
+
+export const DashboardMain = () => {
+  return (
+    <main>
+      <h1>Dashboard</h1>
+    </main>
   )
 }
 
