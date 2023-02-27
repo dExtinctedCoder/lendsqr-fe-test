@@ -6,6 +6,7 @@ import Login from './pages/Login.page'
 import Dashboard from './pages/Dashboard.page'
 import Users from './pages/Users'
 import UserDetail from './pages/UserDetail'
+import AppContextProvider from './assets/context/AppContext'
 
 export const queryClient = new QueryClient()
 
@@ -14,15 +15,17 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContextProvider>
-        <div className="App">
-          <Routes>
-            <Route path='/' element={<Dashboard />}></Route>
-            <Route path='/dashboard'element={<Dashboard />}></Route>
-            <Route path='/login'element={<Login />}></Route>
-            <Route path='/users'element={<Users />}></Route>
-            <Route path='/user/details'element={<UserDetail />}></Route>
-          </Routes>
-        </div>
+        <AppContextProvider>
+          <div className="App">
+            <Routes>
+              <Route path='/' element={<Dashboard />}></Route>
+              <Route path='/dashboard'element={<Dashboard />}></Route>
+              <Route path='/login'element={<Login />}></Route>
+              <Route path='/users'element={<Users />}></Route>
+              <Route path='/user/details'element={<UserDetail />}></Route>
+            </Routes>
+          </div>
+        </AppContextProvider>
       </AuthContextProvider>
     </QueryClientProvider>
   )
