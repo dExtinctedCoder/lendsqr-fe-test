@@ -1,0 +1,22 @@
+.layout__control {
+  
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  @media screen and (max-width: 820px) {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  
+    &>aside {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+    }
+    &>main {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+    }
+    
+  }
+}
