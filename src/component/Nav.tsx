@@ -4,12 +4,20 @@ import {AiOutlineCaretDown} from 'react-icons/Ai'
 import {IoIosNotificationsOutline} from 'react-icons/Io'
 import ProfileImg from '../assets/media/user.png'
 import '../styles/_nav.scss'
-import { useRef,useContext } from 'react'
+import { useRef,useContext, useEffect } from 'react'
 import { AppContext } from '../assets/context/AppContext'
 
 const Nav = () => {
+  const {setNavHeight} = useContext(AppContext)
+  const headerRef = useRef<HTMLHeadingElement>(null)
+
+  useEffect(() => {
+    headerRef.current && setNavHeight(headerRef.current?.offsetHeight)
+
+  }, [headerRef.current])
+  
   return (
-    <header>
+    <header ref={headerRef}>
       <DesktopNav />
       <MobileNav />
     </header>
