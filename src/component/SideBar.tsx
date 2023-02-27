@@ -1,5 +1,5 @@
 import {useContext, Fragment} from 'react'
-import {FiChevronDown} from 'react-icons/Fi'
+import {FiChevronDown} from 'react-icons/fi'
 import { sideBarValues } from "../assets/app-data/SideBarContent"
 import { AppContext } from "../assets/context/AppContext"
 import '../styles/side-bar.scss'
