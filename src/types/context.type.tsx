@@ -12,6 +12,8 @@ export type AuthContextProviderPropsType = {
 export type AppContextType = {
   isMenuOpen: boolean
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+  navHeight: number
+  setNavHeight: React.Dispatch<React.SetStateAction<number>>
 }
 
 export type AppContextProviderPropsType = {
