@@ -6,10 +6,13 @@ export const AppContext = createContext({} as AppContextType)
 const AppContextProvider = ({children}: AppContextProviderPropsType) => {
 
   const [isMenuOpen, setIsMenuOpen ] = useState(false)
+  const [navHeight, setNavHeight] = useState(0)
 
   const contextValObj = {
     isMenuOpen,
     setIsMenuOpen,
+    navHeight,
+    setNavHeight,
   }
 
   return (
