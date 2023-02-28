@@ -45,7 +45,7 @@ const Login = () => {
               <div className="field__control">
                 <div className="pass--field__box">
                   <input onChange={e => setuserInfo({...userInfo, password: e.target.value})} value={userInfo.password} type={passwordVisibility === true ? 'text': 'password'} name="password__field" id="password__field" ref={passwordFieldRef} placeholder='Password' required />
-                  <span onClick={() => setPasswordVisibility(!passwordVisibility)}>SHOW</span>
+                  <span onClick={() => setPasswordVisibility(!passwordVisibility)}>{passwordVisibility ? 'HIDE' : 'SHOW'}</span>
                 </div>
                 <small>FORGOT PASSWORD?</small>
               </div>
