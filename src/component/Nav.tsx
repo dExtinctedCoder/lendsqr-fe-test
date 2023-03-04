@@ -6,6 +6,7 @@ import ProfileImg from '../assets/media/user.png'
 import '../styles/_nav.scss'
 import { useRef,useContext, useEffect } from 'react'
 import { AppContext } from '../assets/context/AppContext'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   const {setNavHeight} = useContext(AppContext)
@@ -28,7 +29,9 @@ export const DesktopNav = () => {
   return (
       <div className='desktop--nav__control'>
         <div className='logo__box'>
-          <img src={Logo} alt='lendsqr' />
+          <Link to='/'>
+            <img src={Logo} alt='lendsqr' />
+          </Link>
         </div>
         <div className='search__bar--box'>
           <input type="text" name="search__bar" id="search__bar" placeholder='Search for anything' />
