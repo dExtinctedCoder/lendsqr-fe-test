@@ -2,7 +2,7 @@ import Logo from '../assets/media/logo.svg'
 import BigImg from '../assets/media/hero--img.png'
 import '../styles/login.page.scss'
 import { useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
@@ -26,7 +26,9 @@ const Login = () => {
       <div>
         <div>
           <div className='logo__box'>
-            <img src={Logo} alt="Logo" />
+            <Link to='/'>
+              <img src={Logo} alt="Logo" />
+            </Link>
           </div>
           <div className='hero--img__box'>
             <img src={BigImg} alt="Hero image" />
