@@ -28,6 +28,22 @@ aside {
     }
   }
   .side--bar {
+    .logout {
+      cursor: pointer;
+        padding: 0.625rem 1.875rem;
+        font-size: 1rem;
+        line-height: 1.185rem;
+        color: $dark--blue;
+        display: flex;
+        align-items: center;
+        
+        &>span {
+          margin-left: 0.625rem;
+        }
+      }
+      .version {
+      padding: 0rem 1.5rem;
+    }
     &>h4 {
       color: $dark--blue;
       font-style: normal;
