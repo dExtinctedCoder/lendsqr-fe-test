@@ -1,4 +1,4 @@
-import {useContext, Fragment} from 'react'
+import {useContext, Fragment, useState} from 'react'
 import {FiChevronDown} from 'react-icons/fi'
 import { sideBarValues } from "../assets/app-data/SideBarContent"
 import { AppContext } from "../assets/context/AppContext"
@@ -25,6 +25,14 @@ const SideBar = () => {
 }
 
 export const SideBarJsx =() => {
+  const [currentTab, setCurrentTab] = useState('Users')
+  const getStyle = (info: string) => {
+    return {
+      border: '3px solid transparent',
+      backgroundColor: currentTab === info ? 'rgba(57, 205, 204, 0.06)' : '',
+      borderLeft: currentTab === info ? '3px solid rgb(57, 205, 204)' : ''
+    }
+  }
   return (
     <div className='side--bar'>
       <h4>{sideBarValues.SWITCHORGICON} <span>Switch Organization</span><FiChevronDown fontSize={16} color='#213F7D' /></h4>
@@ -36,7 +44,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.CUSTOMERS.map(({Icon, tittle}) => {
                 return (
-                  <li key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
@@ -48,7 +56,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.BUSINESSES.map(({Icon, tittle}) => {
                 return (
-                  <li key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
@@ -60,7 +68,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.SETTINGS.map(({Icon, tittle}) => {
                 return (
-                  <li key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
