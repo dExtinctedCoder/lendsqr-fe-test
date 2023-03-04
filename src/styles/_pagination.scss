@@ -3,6 +3,13 @@
 .pagination-container {
   display: flex;
   list-style-type: none;
+  @media screen and (max-width: 690px) {
+    margin-bottom: 0.75rem;
+  }
+  @media screen and (max-width: 365px) {
+    width: 80%;
+    overflow-x: scroll;
+  }
 
   .pagination-item {
     padding: 0 12px;

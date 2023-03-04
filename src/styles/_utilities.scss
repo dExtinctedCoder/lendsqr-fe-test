@@ -11,6 +11,13 @@
   flex-direction: column;
   cursor: pointer;
 
+  @media screen and (max-width: 630px) {
+    width: 100%;
+    &:nth-child(even) {
+      align-items: flex-end;
+    }
+  }
+
   .card__img {
     width: 2.5rem;
     aspect-ratio: 1;
