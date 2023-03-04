@@ -72,7 +72,7 @@ export const MobileNav = () => {
             <div><img src={ProfileImg} alt="" /></div>
             <AiOutlineCaretDown fontSize={16} color='#213F7D' />
           </div>
-          <div onClick={() => toggleMenu()} ref={menuBoxRef} className="menu__box">
+          <div onClick={() => toggleMenu()} ref={menuBoxRef} className={`menu__box ${isMenuOpen ? 'open' : ''}`}>
             <span></span>
             <span></span>
             <span></span>
