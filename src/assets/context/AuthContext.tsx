@@ -9,8 +9,9 @@ const AuthContextProvider = ({children}: AuthContextProviderPropsType) => {
 
   const logout = () => {
     setIsLoggedIn(false)
+    window.localStorage.removeItem('lendsqrUser')
   }
-
+  
   const login = () => {
     setIsLoggedIn(true)
   }
