@@ -1,8 +1,9 @@
 import Logo from '../assets/media/logo.svg'
 import BigImg from '../assets/media/hero--img.png'
 import '../styles/login.page.scss'
-import { useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../assets/context/AuthContext'
 
 const Login = () => {
 
@@ -14,9 +15,12 @@ const Login = () => {
   const navigate = useNavigate()
   const [userInfo, setuserInfo] = useState(defaultUserInfo)
   const [passwordVisibility, setPasswordVisibility] = useState(false)
+  const {login} = useContext(AuthContext)
   
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    login()
+    window.localStorage.setItem('lendsqrUser', JSON.stringify({isLoggedIn: true}))
     navigate("/dashboard")
     setuserInfo(defaultUserInfo)
   }
