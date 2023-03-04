@@ -17,6 +17,7 @@ import { useQuery } from "react-query"
 import { TableContextType, TableTabContextType } from "../types/context.type"
 import Pagination from '../component/Pagination';
 import Filter from "../component/Filter"
+import Loader from '../component/Loading'
 
 let PageSize = 10;
 
@@ -81,7 +82,7 @@ export const DashboardMain = () => {
     return data || error
   }
 
-  const {isLoading} = useQuery(
+  const {isLoading, isError, refetch} = useQuery(
     ['users'],
     fetchUser,
     {
@@ -114,10 +115,19 @@ export const DashboardMain = () => {
     setFilterBoxState(false)
   }
 
+  if (isError) {
+    return (
+      <main className='error__main'>
+        <h2>Something went wrong!</h2>
+        <p onClick={() => refetch()}>refresh page</p>
+      </main>
+    )
+  }
+
   return (
     <main style={{maxHeight: `calc(100vh - ${navHeight}px)`}}>
       {
-        isLoading ? <h1>Loading...</h1> : 
+        isLoading ? <Loader /> : 
         <Fragment>
           <h4>Users</h4>
           <div className="card--box__control">
