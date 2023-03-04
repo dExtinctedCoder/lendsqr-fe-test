@@ -4,7 +4,6 @@ import AuthContextProvider from './assets/context/AuthContext'
 import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login.page'
 import Dashboard from './pages/Dashboard.page'
-import Users from './pages/Users'
 import UserDetail from './pages/UserDetail'
 import AppContextProvider from './assets/context/AppContext'
 
@@ -21,8 +20,7 @@ function App() {
               <Route path='/' element={<Dashboard />}></Route>
               <Route path='/dashboard'element={<Dashboard />}></Route>
               <Route path='/login'element={<Login />}></Route>
-              <Route path='/users'element={<Users />}></Route>
-              <Route path='/user/details'element={<UserDetail />}></Route>
+              <Route path='/user/details/:id'element={<UserDetail />}></Route>
             </Routes>
           </div>
         </AppContextProvider>
