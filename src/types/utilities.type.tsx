@@ -87,3 +87,7 @@ export type GeneralDetailsProps = {
     relationship: string
   }
 }
+
+export type RequireProps = {
+  children: React.ReactNode
+}
