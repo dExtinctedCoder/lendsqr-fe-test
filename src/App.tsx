@@ -6,6 +6,7 @@ import Login from './pages/Login.page'
 import Dashboard from './pages/Dashboard.page'
 import UserDetail from './pages/UserDetail'
 import AppContextProvider from './assets/context/AppContext'
+import Error from './pages/Error'
 
 export const queryClient = new QueryClient()
 
@@ -21,6 +22,7 @@ function App() {
               <Route path='/dashboard'element={<Dashboard />}></Route>
               <Route path='/login'element={<Login />}></Route>
               <Route path='/user/details/:id'element={<UserDetail />}></Route>
+              <Route path='*' element={<Error />}></Route>
             </Routes>
           </div>
         </AppContextProvider>
