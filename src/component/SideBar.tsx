@@ -5,7 +5,7 @@ import { AppContext } from "../assets/context/AppContext"
 import '../styles/side-bar.scss'
 
 const SideBar = () => {
-  const {isMenuOpen, navHeight} = useContext(AppContext)
+  const {isMenuOpen, setIsMenuOpen, navHeight} = useContext(AppContext)
   const sideBarStyle: React.CSSProperties = {
     transition: 'all 350ms',
     transform: isMenuOpen ? 'translateX(0vw)' : 'translateX(-100vw)',
@@ -26,6 +26,7 @@ const SideBar = () => {
 
 export const SideBarJsx =() => {
   const [currentTab, setCurrentTab] = useState('Users')
+  const {setIsMenuOpen} = useContext(AppContext)
   const getStyle = (info: string) => {
     return {
       border: '3px solid transparent',
@@ -44,7 +45,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.CUSTOMERS.map(({Icon, tittle}) => {
                 return (
-                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => {setCurrentTab(tittle); setIsMenuOpen(false)}} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
@@ -56,7 +57,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.BUSINESSES.map(({Icon, tittle}) => {
                 return (
-                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => {setCurrentTab(tittle); setIsMenuOpen(false)}} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
@@ -68,7 +69,7 @@ export const SideBarJsx =() => {
             {
               sideBarValues.SETTINGS.map(({Icon, tittle}) => {
                 return (
-                  <li style={getStyle(tittle)} onClick={() => setCurrentTab(tittle)} key={tittle}>{Icon} <span>{tittle}</span></li>
+                  <li style={getStyle(tittle)} onClick={() => {setCurrentTab(tittle); setIsMenuOpen(false)}} key={tittle}>{Icon} <span>{tittle}</span></li>
                 )
               })
             }
