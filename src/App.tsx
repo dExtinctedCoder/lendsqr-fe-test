@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.page'
 import UserDetail from './pages/UserDetail'
 import AppContextProvider from './assets/context/AppContext'
 import Error from './pages/Error'
+import Require from './component/Require'
 
 export const queryClient = new QueryClient()
 
@@ -18,10 +19,10 @@ function App() {
         <AppContextProvider>
           <div className="App">
             <Routes>
-              <Route path='/' element={<Dashboard />}></Route>
-              <Route path='/dashboard'element={<Dashboard />}></Route>
+              <Route path='/' element={<Require><Dashboard /></Require>}></Route>
+              <Route path='/dashboard'element={<Require><Dashboard /></Require>}></Route>
               <Route path='/login'element={<Login />}></Route>
-              <Route path='/user/details/:id'element={<UserDetail />}></Route>
+              <Route path='/user/details/:id'element={<Require><UserDetail /></Require>}></Route>
               <Route path='*' element={<Error />}></Route>
             </Routes>
           </div>
