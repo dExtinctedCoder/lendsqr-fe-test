@@ -129,8 +129,8 @@ export const DetailsMain = () => {
       <div className="head__info">
         <h4>User Details</h4>
         <div className="cta__box">
-          <button onClick={() => alert(`user has been blacklisted`)} id="blacklist--user__btn">Blacklist User</button>
-          <button onClick={() => alert(`user has been activated`)} id="activate--user__btn">Activate User</button>
+          <button onClick={() => alert(`${userInfoObj.length ? userInfo.userName : ''} has been blacklisted`)} id="blacklist--user__btn">Blacklist User</button>
+          <button onClick={() => alert(`${userInfoObj.length ? userInfo.userName : ''} has been activated`)} id="activate--user__btn">Activate User</button>
         </div>
       </div>
       <section className="profile__nav">
@@ -138,7 +138,7 @@ export const DetailsMain = () => {
           <div>
             <div className="avatar__box"><img src={userInfoObj.length ? userInfo.profile.avatar : ''} alt="" /></div>
             <div>
-              <h5>{userInfoObj.length ? userInfo.userName : ''}</h5>
+              <h5>{userInfoObj.length ? `${userInfo.profile.firstName} ${userInfo.profile.lastName}` : ''}</h5>
               <span>{userInfoObj.length ? userInfo.accountNumber : ''}</span>
             </div>
           </div>
