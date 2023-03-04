@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import '../styles/_utilities.scss'
 
 const Error = () => {
   return (
-    <div>
-      <h1>Page does not exist</h1>
-      <h3><Link to='/'>Go to home</Link></h3>
+    <div className='error__page'>
+      <h2>Page not found!</h2>
+      <h4><Link to='/'>back to home</Link></h4>
     </div>
   )
 }
